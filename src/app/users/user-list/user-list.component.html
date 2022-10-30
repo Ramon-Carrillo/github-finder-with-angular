@@ -1,0 +1,46 @@
+<section class="section">
+  <div class="container has-text-centered">
+    <div>
+      <div class="level-item">
+        <p class="subtitle is-5 mb-3"><strong>Search</strong> Github Users</p>
+      </div>
+      <div class="level-item">
+        <div class="field has-addons">
+          <p class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Find a user"
+              #search
+              (keyup.enter)="getUsers(search.value)"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-3" *ngFor="let user of users">
+        <div class="card is-centered">
+          <figure>
+            <img class="mx-auto" [src]="user.avatar_url" alt="" />
+          </figure>
+          <div class="card-header-title is-centered">
+            {{ user.login | uppercase }}
+          </div>
+          <div class="card-footer is-centered">
+            <a
+              [routerLink]="['/users', user.login]"
+              class="button is-dark mx-auto mb-4"
+              >View Profile</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

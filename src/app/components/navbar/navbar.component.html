@@ -1,0 +1,28 @@
+<nav class="navbar is-dark px-6" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <fa-icon [icon]="faGithub" class="fa-3x"></fa-icon>
+    <div class="navbar-item">
+      <h1 class="title has-text-white is-3 navbar-item">Github Finder</h1>
+    </div>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" routerLink="/"> Home </a>
+
+      <a class="navbar-item" routerLink="/about"> About </a>
+      <a class="navbar-item" routerLink="/users"> Users </a>
+    </div>
+  </div>
+</nav>
